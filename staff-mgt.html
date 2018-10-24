@@ -274,13 +274,10 @@
         <div class="row">
           <div class="col-12">
             <div class="row">
-              <div class="col-md-2 mb-3">
-                <h2 class="h2-reponsive">Staffs</h2>
-              </div>
-
-              <div class="col-md-3 mb-3">
+              <div class="col-md-4 mb-3">
+                <h2 class="d-inline h2-reponsive">Staffs</h2>
                 <a class="" href="javascript:;" data-toggle="tooltip" title="Add New Staff">
-                  <button class="btn btn-primary" data-toggle="modal" data-target="#modalConfirmDelete" data-toggle="modal"><i class="fa fa-user-plus fa-2x mr-1"></i> Add Staff</button>
+                  <button type="button" class="btn-floating btn-gplus" data-toggle="modal" data-target="#addNewStaff" data-toggle="modal"><i class="material-icons">person_add</i></button>
                 </a>
               </div>
 
@@ -502,7 +499,29 @@
       </div>
     </div>
     <!-- confirm Delete -->
-    
+
+    <!-- Add New Staff Form -->
+    <div _ngcontent-c20="" aria-hidden="false" aria-labelledby="myModalLabel" class="modal fade in show" id="addNewStaff" mdbmodal="" role="dialog" tabindex="-1">
+      <div _ngcontent-c20="" class="modal-dialog modal-lg" role="document">
+        <div _ngcontent-c20="" class="modal-content">
+          <div _ngcontent-c20="" class="modal-header default-bg">
+            <h4 _ngcontent-c20="" class="modal-title w-100 text-white" id="myModalLabel">Add New Staff</h4>
+            <button _ngcontent-c20="" aria-label="Close" class="close" data-dismiss="modal" type="button">
+              <span _ngcontent-c20="" aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div _ngcontent-c20="" class="modal-body">
+           ... 
+          </div>
+          <div _ngcontent-c20="" class="modal-footer">
+            <button _ngcontent-c20="" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" mdbwaveseffect="" type="button">Close</button>
+            <button _ngcontent-c20="" class="btn btn-primary btn-sm waves-light" mdbwaveseffect="" type="button">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add New Staff Form -->
+
     <!-- Modals Section -->
   </section>
   <!--/.Footer-->
