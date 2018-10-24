@@ -205,3 +205,7 @@ body {
 .default-bg {
   background-color: rgba(250,80,121,1);
 }
+
+.overlap {
+  margin-top: -15px;
+}
