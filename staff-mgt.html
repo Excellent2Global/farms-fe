@@ -275,10 +275,11 @@
           <div class="col-12">
             <div class="row">
               <div class="col-md-4 mb-3">
-                <h2 class="d-inline h2-reponsive">Staffs</h2><!-- 
-                <a class="" href="javascript:;" data-toggle="tooltip" title="Add New Staff">
-                  <button type="button" class="btn-floating btn-gplus" data-toggle="modal" data-target="#addNewStaff" data-toggle="modal"><i class="material-icons">person_add</i></button>
-                </a> -->
+                <h2 class="d-inline h2-reponsive">Staffs</h2>
+                 <div class="waves-ripple" style="top: 30.9167px; left: 105.083px; transform: scale(5.58) translate(0px, 0px); opacity: 0; transition-duration: 750ms;">
+                  <div class="toast-message ng-star-inserted" id="toast-container" aria-label="Info message" style=""> Info message </div>
+                 </div>
+
               </div>
 
             </div>
@@ -665,8 +666,11 @@
               </div> 
             </div>
             <div _ngcontent-c20="" class="modal-footer">
-              <button _ngcontent-c20="" class="btn btn-warning btn-sm waves-light" data-dismiss="modal" mdbwaveseffect="" type="button">Discard &amp; Cancel</button>
-              <button _ngcontent-c20="" class="btn btn-success btn-sm waves-light" mdbwaveseffect="" type="button">Add Staff</button>
+              <!-- <button _ngcontent-c20="" class="btn btn-warning btn-sm waves-light" data-dismiss="modal" mdbwaveseffect="" type="button" onclick="toastr.danger('Failed to create new staff.');">Discard &amp; Cancel</button> -->
+              <!-- <button _ngcontent-c20="" class="btn btn-success btn-sm waves-light" mdbwaveseffect="" type="button"> -->
+                <!-- Info message -->
+                <a class="btn btn-warning btn-sm" type="button" id="cancel-new-staff" data-dismiss="modal">Discard &amp; Cancel</a>
+                <a class="btn btn-success btn-sm" type="button" id="new-staff">Add Staff</a>
             </div>
           </div>
         </div>
@@ -696,19 +700,15 @@
       var sideNavScrollbar = document.querySelector('.custom-scrollbar');
       Ps.initialize(sideNavScrollbar);
     </script>
-    <!-- <script type="text/javascript">
-      (function() {
-  
-      $(".panel").on("show.bs.collapse hide.bs.collapse", function(e) {
-        if (e.type=='show'){
-          $(this).addClass('active');
-        }else{
-          $(this).removeClass('active');
-        }
-      });  
+    <script type="text/javascript">
+      $("#new-staff").click(function () {
+        toastr["success"]("Staff created successfully.")
+      });
 
-    }).call(this);
-    </script> -->
+      $("#cancel-new-staff").click(function () {
+        toastr["warning"]("Failed to create new staff.")
+      });
+    </script>
     <!-- Initializations -->
     <script type="text/javascript">
       // Animations initialization
